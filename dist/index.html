@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunScout v14</title>
+  <script type="module" crossorigin src="/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/index.css">
+</head>
+<body>
+  <div id="app">
+    <div class="status-bar">
+      <span id="status-dot" class="dot disconnected"></span>
+      <span id="status-text">Connecting...</span>
+      <span id="battery-text"></span>
+    </div>
+    <h1>SunScout<br><span class="subtitle">v14 G2 Path Map</span></h1>
+    <p class="tagline">G2 sun path map + compass-driven path/align</p>
+
+    <div class="controls">
+      <div class="card">
+        <div class="card-title">Location Card</div>
+        <label>Saved Location
+          <select id="location-select"></select>
+        </label>
+        <label>Search Location
+          <input id="location-search-input" type="text" placeholder="City, address, or place name" />
+        </label>
+        <div class="buttons">
+          <button id="search-location-btn">Search</button>
+          <button id="voice-location-btn">Voice Location</button>
+          <button id="current-location-btn">Use Current Location</button>
+        </div>
+        <div id="location-result" class="card-note">Choose a saved location, search for one, use voice, or use current location.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Phone Motion</div>
+        <div class="buttons">
+          <button id="enable-compass-btn">Enable Compass</button>
+        </div>
+        <div id="compass-result" class="card-note">Uses your phone heading to drive Align and the G2 Path map.</div>
+      </div>
+
+      <label>Date & Time
+        <input id="date-input" type="datetime-local" />
+      </label>
+      <label>Head Direction
+        <input id="head-heading-input" type="range" min="0" max="359" value="180" />
+        <span id="head-heading-text">180°</span>
+      </label>
+      <label>Camera Heading
+        <input id="camera-heading-input" type="range" min="0" max="359" value="180" />
+        <span id="camera-heading-text">180°</span>
+      </label>
+
+      <div class="buttons">
+        <button id="overview-btn">Overview</button>
+        <button id="now-btn">Sun Now</button>
+        <button id="align-btn">Align</button>
+        <button id="window-btn">Window</button>
+        <button id="path-btn">Path</button>
+        <button id="shadow-btn">Shadow</button>
+        <button id="share-btn">Share via Email</button>
+        <button id="push-btn">Push</button>
+      </div>
+    </div>
+
+    <div class="help-card">
+      <div class="help-title" id="help-title">Overview</div>
+      <div class="help-body" id="help-body">Quick summary of sunrise, sunset, golden-hour timing, and overall solar direction for the selected location.</div>
+    </div>
+
+    <div id="log"></div>
+  </div>
+</body>
+</html>

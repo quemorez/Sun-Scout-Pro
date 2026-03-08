@@ -1,0 +1,11 @@
+{
+  "package_id": "com.zq.sunscout",
+  "edition": "202601",
+  "name": "SunScout",
+  "version": "0.3.0",
+  "min_app_version": "0.1.0",
+  "tagline": "Cinematography HUD for Even G2",
+  "description": "SunScout with a G2-friendly sun path map rendered directly on the Path page and driven by phone heading.",
+  "author": "Zachary Quemore",
+  "entrypoint": "index.html"
+}
